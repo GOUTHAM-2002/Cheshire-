@@ -1,3 +1,5 @@
+
+
 :root {
     --primary-color: #ffffff;
     --secondary-color: #0a0a0a;
@@ -355,6 +357,7 @@ h1 {
 
 .form-group {
     margin-bottom: 1.5rem;
+    width: 82%;
 }
 
 input, select {

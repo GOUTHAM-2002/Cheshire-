@@ -14,7 +14,6 @@
             
             <form method="POST" action="{{ url_for('login') }}" class="auth-form">
                 <div class="form-group">
-
                     <input type="email" name="email" placeholder="Email" required>
                     <div class="input-hint">Enter your registered email address</div>
                 </div>
@@ -32,10 +31,13 @@
                 </div>
                 <button type="submit" class="btn-primary">Login</button>
             </form>
+            <br>
 
             <div class="auth-separator">
                 <span>New to Cheshire?</span>
+                
             </div>
+            <br>
 
             <div class="role-buttons">
                 <a href="{{ url_for('signup', role='facility_owner') }}" class="btn-role facility">
