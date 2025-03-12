@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<div class="auth-hero">
+    <div class="auth-container animate-fade-in">
+        <div class="auth-box glass-effect">
+            <div class="auth-header">
+                <div class="logo-container">
+                    <span class="logo-icon">🏢</span>
+                </div>
+                <h1>Welcome Back</h1>
+                <p class="auth-subtitle">Access your storage management dashboard</p>
+            </div>
+            
+            <form method="POST" action="{{ url_for('login') }}" class="auth-form">
+                <div class="form-group">
+
+                    <input type="email" name="email" placeholder="Email" required>
+                    <div class="input-hint">Enter your registered email address</div>
+                </div>
+                <div class="form-group">
+
+                    <input type="password" name="password" placeholder="Password" required>
+                    <div class="input-hint">Enter your secure password</div>
+                </div>
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" name="remember">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn-primary">Login</button>
+            </form>
+
+            <div class="auth-separator">
+                <span>New to Cheshire?</span>
+            </div>
+
+            <div class="role-buttons">
+                <a href="{{ url_for('signup', role='facility_owner') }}" class="btn-role facility">
+                    <span class="role-icon">🏢</span>
+                    <div class="role-text">
+                        <span class="role-title">Facility Owner</span>
+                        <span class="role-desc">Manage your storage facilities</span>
+                    </div>
+                </a>
+                <a href="{{ url_for('signup', role='customer') }}" class="btn-role customer">
+                    <span class="role-icon">🔑</span>
+                    <div class="role-text">
+                        <span class="role-title">Customer</span>
+                        <span class="role-desc">Find and rent storage space</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

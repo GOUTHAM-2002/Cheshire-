@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{% block title %}About{% endblock %}
+{% block content %}
+<div class="about-hero">
+    <div class="about-content animate-fade-in">
+        <h1>About Cheshire Storage</h1>
+        <p class="about-subtitle">Revolutionizing the Storage Industry with AI</p>
+        <div class="about-stats">
+            <div class="stat-badge">
+                <span class="stat-icon">🌟</span>
+                <span class="stat-text">Industry Leader</span>
+            </div>
+            <div class="stat-badge">
+                <span class="stat-icon">🤝</span>
+                <span class="stat-text">Trusted Partner</span>
+            </div>
+            <div class="stat-badge">
+                <span class="stat-icon">🚀</span>
+                <span class="stat-text">Innovation First</span>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-indicator">
+        <span>Explore Our Story</span>
+        <div class="scroll-arrow">↓</div>
+    </div>
+</div>
+
+<section class="about-section">
+    <div class="about-grid">
+        <div class="about-card animate-fade-in">
+            <div class="card-icon">🎯</div>
+            <h2>Our Mission</h2>
+            <p>Transforming storage management through cutting-edge technology and AI-driven solutions.</p>
+            <ul class="mission-points">
+                <li>Revolutionize Storage Management</li>
+                <li>Empower Facility Owners</li>
+                <li>Enhance Customer Experience</li>
+            </ul>
+        </div>
+        <div class="about-card animate-fade-in">
+            <div class="card-icon">💡</div>
+            <h2>Innovation</h2>
+            <p>Leading the industry with smart analytics, AI assistants, and automated security systems.</p>
+            <ul class="mission-points">
+                <li>AI-Powered Solutions</li>
+                <li>Cutting-edge Technology</li>
+                <li>Continuous Improvement</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="timeline-section">
+    <h2 class="section-title">Our Journey</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-date">2020</div>
+            <div class="timeline-content">
+                <h3>Company Founded</h3>
+                <p>Started with a vision to revolutionize storage management</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-date">2021</div>
+            <div class="timeline-content">
+                <h3>AI Integration</h3>
+                <p>Launched our first AI-powered management system</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-date">2023</div>
+            <div class="timeline-content">
+                <h3>Global Expansion</h3>
+                <p>Reached 500+ facilities across multiple countries</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="solutions-section">
+    <h2 class="section-title">Our Solutions</h2>
+    <div class="solutions-grid">
+        <div class="solution-card">
+            <div class="solution-icon">💼</div>
+            <h3>For Facility Owners</h3>
+            <ul class="solution-list">
+                <li>AI-Powered Management Dashboard</li>
+                <li>Real-time Analytics</li>
+                <li>Automated Customer Service</li>
+                <li>Smart Security Systems</li>
+                <li>Predictive Maintenance</li>
+                <li>Revenue Optimization</li>
+            </ul>
+            <a href="{{ url_for('signup', role='facility_owner') }}" class="btn-solution">Get Started →</a>
+        </div>
+        <div class="solution-card">
+            <div class="solution-icon">🏠</div>
+            <h3>For Customers</h3>
+            <ul class="solution-list">
+                <li>Easy Online Booking</li>
+                <li>Virtual Unit Tours</li>
+                <li>Secure Digital Access</li>
+                <li>24/7 Support</li>
+                <li>Mobile App Access</li>
+                <li>Flexible Payment Options</li>
+            </ul>
+            <a href="{{ url_for('signup', role='customer') }}" class="btn-solution">Find Storage →</a>
+        </div>
+    </div>
+</section>
+
+<section class="values-section">
+    <h2 class="section-title">Our Values</h2>
+    <div class="values-grid">
+        <div class="value-card">
+            <span class="value-icon">🎯</span>
+            <h3>Excellence</h3>
+            <p>Striving for the highest quality in everything we do</p>
+        </div>
+        <div class="value-card">
+            <span class="value-icon">🤝</span>
+            <h3>Partnership</h3>
+            <p>Building lasting relationships with our clients</p>
+        </div>
+        <div class="value-card">
+            <span class="value-icon">💡</span>
+            <h3>Innovation</h3>
+            <p>Constantly pushing the boundaries of what's possible</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

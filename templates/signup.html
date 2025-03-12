@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block title %}Sign Up - {{ role|title }}{% endblock %}
+{% block content %}
+<div class="auth-hero">
+    <div class="auth-container animate-fade-in">
+        <div class="auth-box glass-effect">
+            <div class="auth-header">
+                <div class="logo-container">
+                    <span class="logo-icon">{{ '🏢' if role == 'facility_owner' else '🔑' }}</span>
+                </div>
+                <div class="role-badge">{{ role|title }}</div>
+                <h1>Create Account</h1>
+                <p class="auth-subtitle">Join the next generation of storage management</p>
+            </div>
+
+            <form method="POST" class="auth-form">
+                <div class="form-grid">
+                    <div class="form-group">
+
+                        <input type="text" name="first_name" placeholder="First Name" required>
+                        <div class="input-hint">Enter your first name</div>
+                    </div>
+                    <div class="form-group">
+
+                        <input type="text" name="last_name" placeholder="Last Name" required>
+                        <div class="input-hint">Enter your last name</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+
+                    <input type="email" name="email" placeholder="Email" required>
+                    <div class="input-hint">We'll never share your email</div>
+                </div>
+                <div class="form-group">
+  
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <div class="input-hint">For important notifications only</div>
+                </div>
+                
+                {% if role == 'facility_owner' %}
+                <div class="form-section">
+                    <h3 class="section-title">Company Details</h3>
+                    <div class="form-group">
+         
+                        <input type="text" name="company_name" placeholder="Company Name" required>
+                        <div class="input-hint">Your registered business name</div>
+                    </div>
+                    <div class="form-group">
+
+                        <input type="text" name="company_hq" placeholder="Company Headquarters" required>
+                        <div class="input-hint">Main office location</div>
+                    </div>
+                    <div class="form-group">
+                     
+                        <input type="number" name="properties_managed" placeholder="Total Properties Managed" required>
+                        <div class="input-hint">Number of storage facilities</div>
+                    </div>
+                </div>
+                {% endif %}
+                
+                <div class="form-section">
+                    <h3 class="section-title">Security</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                      
+                            <input type="password" name="password" placeholder="Password" required>
+                            <div class="input-hint">At least 8 characters</div>
+                        </div>
+                        <div class="form-group">
+                      
+                            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+                            <div class="input-hint">Repeat your password</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-primary">Create Account</button>
+            </form>
+
+            <p class="auth-link">Already have an account? <a href="{{ url_for('login') }}">Login</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}

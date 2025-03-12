@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="hero-section">
+    <div class="hero-content animate-fade-in">
+        <h1>Welcome to Cheshire Storage</h1>
+
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-number">500+</span>
+                <span class="stat-label">Facilities Managed</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">50+</span>
+                <span class="stat-label">Happy Customers</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">99.9%</span>
+                <span class="stat-label">Uptime</span>
+            </div>
+        </div>
+        <div class="hero-buttons">
+            <a href="{{ url_for('signup', role='facility_owner') }}" class="btn-cta btn-cta-primary">Facility Owners</a>
+            <a href="{{ url_for('signup', role='customer') }}" class="btn-cta btn-cta-secondary">Find Storage</a>
+        </div>
+    </div>
+    <div class="scroll-indicator">
+        <span>Discover More</span>
+        <div class="scroll-arrow">↓</div>
+    </div>
+</div>
+
+<section class="features-section">
+    <div class="features-container">
+        <h2 class="section-title">Powerful Features</h2>
+        <div class="features-grid">
+            <div class="feature-card animate-fade-in">
+                <div class="feature-icon">🤖</div>
+                <h3 class="feature-title">AI Assistant</h3>
+                <p class="feature-description">24/7 virtual assistant to handle inquiries and bookings automatically</p>
+                <ul class="feature-list">
+                    <li>Natural Language Processing</li>
+                    <li>Automated Responses</li>
+                    <li>Multi-language Support</li>
+                </ul>
+            </div>
+            <div class="feature-card animate-fade-in">
+                <div class="feature-icon">📊</div>
+                <h3 class="feature-title">Smart Analytics</h3>
+                <p class="feature-description">Real-time insights and predictive occupancy analysis</p>
+                <ul class="feature-list">
+                    <li>Occupancy Predictions</li>
+                    <li>Revenue Forecasting</li>
+                    <li>Market Trends</li>
+                </ul>
+            </div>
+            <div class="feature-card animate-fade-in">
+                <div class="feature-icon">📹</div>
+                <h3 class="feature-title">CCTV Dashboard</h3>
+                <p class="feature-description">Live monitoring with AI-powered security alerts</p>
+                <ul class="feature-list">
+                    <li>Motion Detection</li>
+                    <li>24/7 Monitoring</li>
+                    <li>Instant Alerts</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials-section">
+    <h2 class="section-title">What Our Clients Say</h2>
+    <div class="testimonials-grid">
+        <div class="testimonial-card">
+            <div class="testimonial-quote">"Revolutionized our storage management"</div>
+            <div class="testimonial-author">- John Smith, CEO StoragePro</div>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-quote">"Increased efficiency by 300%"</div>
+            <div class="testimonial-author">- Sarah Johnson, Operations Manager</div>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-quote">"Best investment for our business"</div>
+            <div class="testimonial-author">- Mike Williams, Facility Owner</div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="cta-content">
+        <h2 class="cta-title">Ready to Transform Your Storage Business?</h2>
+
+        <div class="cta-buttons">
+            <a href="{{ url_for('signup', role='facility_owner') }}" class="btn-cta btn-cta-primary">Get Started</a>
+            <a href="{{ url_for('about') }}" class="btn-cta btn-cta-secondary">Learn More</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
